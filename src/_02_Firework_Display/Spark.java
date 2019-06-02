@@ -16,12 +16,13 @@ public class Spark {
 	public boolean fire = false;
 	public boolean dead = false;
 	
-	public Spark(int x, int y) {
+	public Spark(int x, int y, int xVel, int yVel) {
 		this.x = x;
 		this.y = y;
 		Random r = new Random();
 		color = new Color(r.nextInt(128) + 128, r.nextInt(128) + 128, r.nextInt(128) + 128);
-		yVelocity = -30;
-		xVelocity = 0;
+		yVelocity = yVel;
+		
+		xVelocity = xVel;
 	}
 }
